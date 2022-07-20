@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="#EDEBEB"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Fuqaroning ismi"
+                android:paddingHorizontal="10dp" />
+
+            <EditText
+                android:id="@+id/ed_surname"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="20dp"
+                android:background="#EDEBEB"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Fuqaroning familiyasi"
+                android:paddingHorizontal="10dp" />
+
+            <EditText
+                android:id="@+id/ed_fio"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="20dp"
+                android:background="#EDEBEB"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Otasining ismi"
+                android:paddingHorizontal="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="20dp"
+                android:background="#EDEBEB">
+
+                <Spinner
+                    android:id="@+id/region_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:entries="@array/region"
+                    android:hapticFeedbackEnabled="false" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/ed_city"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="20dp"
+                android:background="#EDEBEB"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Shahar, tuman"
+                android:paddingHorizontal="10dp" />
+
+            <EditText
+                android:id="@+id/ed_address"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="20dp"
+                android:background="#EDEBEB"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Uyining manzili"
+                android:paddingHorizontal="10dp" />
+
+            <EditText
+                android:id="@+id/ed_passport_date"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="20dp"
+                android:background="#EDEBEB"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="Pasport olgan vaqti"
+                android:inputType="datetime"
+                android:paddingHorizontal="10dp" />
+
+            <EditText
+                android:id="@+id/ed_passport_deadline"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="20dp"
+                android:background="#EDEBEB"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="Pasport muddati"
+                android:inputType="datetime"
+                android:paddingHorizontal="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="20dp"
+                android:background="#EDEBEB">
+
+                <Spinner
+                    android:id="@+id/gender_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:entries="@array/gender"
+                    android:focusableInTouchMode="true"
+                    android:hapticFeedbackEnabled="false" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:focusableInTouchMode="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholde" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Fuqaroning rasmi 3x4"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/save_btn"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="#52CA6C"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                app:rippleColor="@color/white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/font_roboto"
+                        android:gravity="center"
+                        android:text="Saqlash"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

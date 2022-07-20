@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.projects.passport.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allCitizenFragment"
+        android:name="uz.projects.passport.fragments.AllCitizenFragment"
+        android:label="Fuqaro ma'lumotlari"
+        tools:layout="@layout/fragment_all_citizen">
+        <action
+            android:id="@+id/action_allCitizenFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_allCitizenFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="uz.projects.passport.fragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menuFragment_to_givePassportFragment"
+            app:destination="@id/givePassportFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_allCitizenFragment2"
+            app:destination="@id/allCitizenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/givePassportFragment"
+        android:name="uz.projects.passport.fragments.GivePassportFragment"
+        android:label="Fuqaroning ma’lumotlarini qo’shish"
+        tools:layout="@layout/fragment_give_passport" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="uz.projects.passport.fragments.AboutFragment"
+        android:label="{name}"
+        tools:layout="@layout/fragment_about">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="uz.projects.passport.fragments.EditFragment"
+        android:label="Ma'lumotlarni o'zgartirish"
+        tools:layout="@layout/fragment_edit" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
